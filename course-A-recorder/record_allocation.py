@@ -40,7 +40,7 @@ async def main():
             await human_delay(0.5, 1.0)
             
             await page.locator('input[name="password"]').click()
-            await page.locator('input[name="password"]').type("admin@1234", delay=random.randint(70, 130))
+            await page.locator('input[name="password"]').type("😭😭😭", delay=random.randint(70, 130))
             await human_delay(0.8, 1.5)
 
             login_btn = page.locator('button:has-text("Sign In")').first
