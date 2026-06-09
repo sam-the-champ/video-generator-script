@@ -31,7 +31,7 @@ async def main():
             # -------------------------------------------------------------
             print("🎬 Step 1: Navigating to Turing Game Portal...")
             # Automatically matching your new Vercel deployment endpoint
-            await page.goto("https://turing-game-six.vercel.app/")
+            await page.goto("https://turing-game-three.vercel.app/")
             await page.wait_for_load_state("networkidle")
             await human_delay(2.5, 4.0)
 
@@ -91,7 +91,7 @@ async def main():
                 
                 # Dynamic hook targeting your chat layout inputs
                 chat_field = page.locator('input.chat-input, #chat-input').first
-                await chat_field.waitFor(state="visible", timeout=10000)
+                await chat_field.wait_for(state="visible", timeout=10000)
                 await chat_field.click()
                 await human_delay(0.5, 1.2)
                 
